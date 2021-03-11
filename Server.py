@@ -55,7 +55,7 @@ def main():
 
         print("Esperando Header...")
         
-        headerR, nHr = com2.getData(2)      
+        header, nHr = com2.getData(2)      
         
         print("---------------------")
         print("Header recebido com sucesso!")
@@ -64,15 +64,15 @@ def main():
 
 
         print("Enviando resposta do header para o cliente...")  
-        com2.sendData(np.asarray(headerR))
+        com2.sendData(np.asarray(header))
         print("---------------------")
 
-        HeadT = int.from_bytes(headerR, "big")
+        HeadR = int.from_bytes(header, "big")
 
         print("Esperando dados do payload do cliente...")
         print("--------------------")    
 
-        rxBuffer, nRx = com2.getData(HeadT)     
+        rxBuffer, nRx = com2.getData(HeadR)     
 
         print("Payload recebido!")
         print("--------------------")

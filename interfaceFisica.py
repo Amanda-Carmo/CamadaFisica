@@ -19,6 +19,10 @@ class fisica(object):
     def __init__(self, name):
         self.name        = name
         self.port        = None
+
+        # Para aumentar o tempo de execução, é necessário alterar a interface física, de modo a diminuir o baudrate. 
+        # Neste código, setei, por exemplo, como opção como 57600.
+
         self.baudrate    = 57600
         # self.baudrate    = 115200
         # self.baudrate    = 9600

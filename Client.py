@@ -89,10 +89,9 @@ def main():
             tempo = time.time() - timeStart
             taxa = txLen/tempo
             
-            
             print("___________________________________________________")   
-            print("Tempo gasto para envio e recebimento: {}".format(tempo))
-            print("Taxa de transmissão (bytes por segundo): {}".format(taxa))
+            print("Tempo gasto para envio e recebimento: {}".format(round(tempo, 3)))
+            print("Taxa de transmissão (bytes por segundo): {}".format(round(taxa, 3)))
             print("___________________________________________________")
 
             print("-------------------------")
